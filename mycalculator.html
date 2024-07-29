@@ -18,13 +18,13 @@
             box-sizing: border-box;
         }
         body{
-            background:#181717;
+            background: #1e1e1e;
             display:flex;
             justify-content: center;
             align-items: center;
         }
         #calculator{
-            background:#3e3e3e;
+            background:#2b2b2b;
             padding:20px;
             position:relative;
             top:30px;
@@ -41,7 +41,7 @@
             color:#fffdfd;
             text-align:right;
             font-size:1.7em;
-            background:#4e4e4e
+            background:#1e1e1e
         }
         #display{
             margin-bottom:20px
@@ -56,33 +56,31 @@
             padding:20px;
             border-radius:5px;
             border:none;
-            background:#181717;
+            background:#3e3e3e;
             transition:.5s;
+            font-size:1.2em;
             color:#ffffff
         }
         button:hover{
-           background:rgba(255, 255, 255, 0.123)
+           background:rgba(255, 255, 255, 0.315);
+           cursor:pointer
         }
         button:active{
-            scale:0.85
+            scale:0.95
         }
         .operators{
-            background:orange;
+            background:#fd9e10;
             color:#fcfafae7;
             font-size: 20px;
             font-weight: 700;
             padding:10px
         }
         .operators:hover{
-            background:rgba(255, 166, 0, 0.76)
+            background:#fd9e10
         }
-        button:nth-child(21){
-            background:rgb(248, 34, 69);
+        button:nth-child(23){
+            background:#f54040;
             grid-column:span 2
-        }
-        button:nth-child(21):hover{
-            background:rgba(243, 8, 47, 0.932)
-
         }
         button:nth-child(17){
             background:green
@@ -121,7 +119,10 @@
             <button onclick="display('.')">.</button>
             <button onclick="generateRandom()">Ran</button>
             <button class="operators" onclick="display('*')">x</button>
+            <button onclick="display('Math.PI')">&pcy;</button>
+            <button onclick="display('Math.E')">e</button>
             <button onclick="calculateResult()">=</button>
+           
         </div>
     </div>
     <script>
@@ -149,5 +150,8 @@
             document.getElementById('screen').value=random
         }
     </script>
+    <br><br>
+    <iframe src="Calculator.html" style="width:100%;height:700px;
+    position:absolute;top:700px"></iframe>
 </body>
 </html>
